@@ -1,4 +1,4 @@
-#Top answer did not work for me (mac High Sierra v10.13.4), but this one did
+# Top answer did not work for me (mac High Sierra v10.13.4), but this one did
 (https://stackoverflow.com/questions/20939648/issue-pushing-new-code-in-github)
 ```
 git pull
