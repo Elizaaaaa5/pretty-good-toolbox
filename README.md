@@ -1,2 +1,2 @@
 # pretty-good-toolbox
-some useful stuff for aesthetical programming
+some useful stuff for aesthetical programmers.
