@@ -12,8 +12,8 @@
 
 6. pass : It is the null statement in python. Nothing happens when this is encountered. This is used to prevent indentation errors and used as a placeholder
   		'''
+		
 		\# Python program to test map, filter and lambda
-
 		\# Function to test map 
 		def cube(x):
 			return x**2
@@ -49,7 +49,7 @@
 		FILTER EXAMPLE
 		[16, 25, 36, 49]
 		'''
-7. Return sends a specified value back to its caller whereas *Yield* can produce a sequence of values. 
+7. Return sends a specified value back to its caller whereas **Yield** can produce a sequence of values. 
 8. with
 
 		'''
