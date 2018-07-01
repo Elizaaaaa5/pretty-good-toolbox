@@ -12,27 +12,27 @@
 
 6. pass : It is the null statement in python. Nothing happens when this is encountered. This is used to prevent indentation errors and used as a placeholder
   '''
-  	# Python program to test map, filter and lambda
+  	\# Python program to test map, filter and lambda
 
-	# Function to test map 
+	\# Function to test map 
 	def cube(x):
 		return x**2
 
-	# Driver to test above function
+	\# Driver to test above function
 
-	# Program for working of map 
+	\# Program for working of map 
 	print "MAP EXAMPLES"
 	cubes = map(cube, range(10))
 	print cubes
 
 	print "LAMBDA EXAMPLES"
 
-	# first parentheses contains a lambda form, that is 
-	# a squaring function and second parentheses represents
-	# calling lambda
+	\# first parentheses contains a lambda form, that is 
+	\# a squaring function and second parentheses represents
+	\# calling lambda
 	print (lambda x: x**2)(5)
 
-	# Make function of two arguments that return their product
+	\# Make function of two arguments that return their product
 	print (lambda x, y: x*y)(3, 4)
 
 
