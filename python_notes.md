@@ -40,7 +40,7 @@
 	special_cubes = filter(lambda x: x > 9 and x < 60, cubes)
 	print special_cubes
 
-	*****output*****
+	*output*
 	MAP EXAMPLES
 	[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 	LAMBDA EXAMPLES
@@ -49,4 +49,39 @@
 	FILTER EXAMPLE
 	[16, 25, 36, 49]
 '''
+7. Return sends a specified value back to its caller whereas *Yield* can produce a sequence of values. 
+8. with
+	'''
+	with A() as a, B() as b:
+    		suite
+
+	*is equivalent to*
+
+	with A() as a:
+    		with B() as b:
+        		suite
+	'''
+	
+9. is
+	'''
+	\# using is to check object identity
+	\# string is immutable( cannot be changed once alloted)
+	\# hence occupy same memory location
+	print (' ' is ' ')
+ 
+	\# using is to check object identity
+	\# dictionary is mutable( can be changed once alloted)
+	\# hence occupy different memory location
+	print ({} is {})
+	
+	*output*
+	True
+	False	
+	'''
+10. non-local : This keyword works similar to the global, but rather than global, this keyword declares a variable to point to variable of outside enclosing function, in case of nested functions.
+
+
+
+
+
 
