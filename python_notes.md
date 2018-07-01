@@ -12,42 +12,41 @@
 
 6. pass : It is the null statement in python. Nothing happens when this is encountered. This is used to prevent indentation errors and used as a placeholder
   '''
-  # Python program to test map, filter and lambda
+  	# Python program to test map, filter and lambda
 
-# Function to test map 
-def cube(x):
-	return x**2
+	# Function to test map 
+	def cube(x):
+		return x**2
 
-# Driver to test above function
+	# Driver to test above function
 
-# Program for working of map 
-print "MAP EXAMPLES"
-cubes = map(cube, range(10))
-print cubes
+	# Program for working of map 
+	print "MAP EXAMPLES"
+	cubes = map(cube, range(10))
+	print cubes
 
-print "LAMBDA EXAMPLES"
+	print "LAMBDA EXAMPLES"
 
-# first parentheses contains a lambda form, that is 
-# a squaring function and second parentheses represents
-# calling lambda
-print (lambda x: x**2)(5)
+	# first parentheses contains a lambda form, that is 
+	# a squaring function and second parentheses represents
+	# calling lambda
+	print (lambda x: x**2)(5)
 
-# Make function of two arguments that return their product
-print (lambda x, y: x*y)(3, 4)
+	# Make function of two arguments that return their product
+	print (lambda x, y: x*y)(3, 4)
 
 
-print "FILTER EXAMPLE"
-special_cubes = filter(lambda x: x > 9 and x < 60, cubes)
-print special_cubes
+	print "FILTER EXAMPLE"
+	special_cubes = filter(lambda x: x > 9 and x < 60, cubes)
+	print special_cubes
 
-*****output*****
-'''
-MAP EXAMPLES
-[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-LAMBDA EXAMPLES
-25
-12
-FILTER EXAMPLE
-[16, 25, 36, 49]
+	*****output*****
+	MAP EXAMPLES
+	[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+	LAMBDA EXAMPLES
+	25
+	12
+	FILTER EXAMPLE
+	[16, 25, 36, 49]
 '''
 
