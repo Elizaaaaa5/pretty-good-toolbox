@@ -1,0 +1,30 @@
+import os 
+from pprint import pprint 
+import pandas as pd
+from pandas import ExcelWriter
+from pandas import ExcelFile
+import numpy as np
+dir_br='yourpath'
+
+def readFileNames2Excel(dir_name,f_name,des_path):
+    files = []
+    dirname=dir_name
+    for filenames in os.walk(dirname):
+    # # print path to all subdirectories first.
+    # for subdirname in dirnames:
+    #     files.append(os.path.join(dirname, subdirname))
+
+    # print path to all filenames.
+        for filename in filenames:
+            files.append(filename)
+            
+    pprint(files)
+    os.chdir(des_path)
+    # Write excel
+    df = pd.DataFrame({f_name:files})
+ 
+    writer = ExcelWriter('your_filename.xlsx')
+    df.to_excel(writer,'sheet_1',index=False)
+    writer.save()
+
+readFileNames2Excel(your_dir_name,'your_hearder_name','your_des_dir')
