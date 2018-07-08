@@ -9,6 +9,9 @@ Thanks to [Tutorialspoint] (https://www.tutorialspoint.com/java/index.htm)
     4. `int compareToIgnoreCase(String str)` Compares two strings lexicographically, ignoring case differences.
     5. `String concat(String str)` Concatenates the specified string to the end of this string.
     6. `boolean contentEquals(StringBuffer sb)` Returns true if and only if this String represents the same sequence of characters as the specified StringBuffer.
+      
+      - note:  *String* is used to manipulate character strings that cannot be changed (read-only and immutable). *StringBuffer* is used to represent characters that can be modified. 
+      
     7. `static String copyValueOf(char[] data)` Returns a String that represents the character sequence in the array specified.
     8. `static String copyValueOf(char[] data, int offset, int count)` Returns a String that represents the character sequence in the array specified.
     9. `boolean endsWith(String suffix)` Tests if this string ends with the specified suffix.
