@@ -52,3 +52,38 @@ Thanks to [Tutorialspoint] (https://www.tutorialspoint.com/java/index.htm)
     44. `String toUpperCase(Locale locale)` Converts all of the characters in this String to upper case using the rules of the given Locale.
     45. `String trim()` Returns a copy of the string, with leading and trailing whitespace omitted.
     46. `static String valueOf(primitive data type x)` Returns the string representation of the passed data type argument.
+    
+**Array**
+
+Declaring an array variable, creating an array, and assigning the reference of the array to the variable can be combined in one statement, as shown below −
+
+`dataType[] arrayRefVar = new dataType[arraySize];`
+
+alternative way - `dataType[] arrayRefVar = {value0, value1, ..., valuek};`
+
+Functions:
+
+1 	
+
+`public static int binarySearch(Object[] a, Object key)`
+
+Searches the specified array of Object ( Byte, Int , double, etc.) for the specified value using the binary search algorithm. The array must be sorted prior to making this call. This returns index of the search key, if it is contained in the list; otherwise, it returns ( – (insertion point + 1)).
+
+2 	
+
+`public static boolean equals(long[] a, long[] a2)`
+
+Returns true if the two specified arrays of longs are equal to one another. Two arrays are considered equal if both arrays contain the same number of elements, and all corresponding pairs of elements in the two arrays are equal. This returns true if the two arrays are equal. Same method could be used by all other primitive data types (Byte, short, Int, etc.)
+
+3 	
+
+`public static void fill(int[] a, int val)`
+
+Assigns the specified int value to each element of the specified array of ints. The same method could be used by all other primitive data types (Byte, short, Int, etc.)
+
+4 	
+
+`public static void sort(Object[] a)`
+
+Sorts the specified array of objects into an ascending order, according to the natural ordering of its elements. The same method could be used by all other primitive data types ( Byte, short, Int, etc.)
+
