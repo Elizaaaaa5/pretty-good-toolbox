@@ -87,3 +87,143 @@ Assigns the specified int value to each element of the specified array of ints. 
 
 Sorts the specified array of objects into an ascending order, according to the natural ordering of its elements. The same method could be used by all other primitive data types ( Byte, short, Int, etc.)
 
+**Date and Time**
+
+*Date* class available in *java.util*
+
+1 	
+
+`Date( )`
+
+This constructor initializes the object with the current date and time.
+
+2 	
+
+`Date(long millisec)`
+
+This constructor accepts an argument that equals the number of milliseconds that have elapsed since midnight, January 1, 1970.
+
+Functions:
+
+1 	
+
+`boolean after(Date date)`
+
+Returns true if the invoking Date object contains a date that is later than the one specified by date, otherwise, it returns false.
+
+2 	
+
+`boolean before(Date date)`
+
+Returns true if the invoking Date object contains a date that is earlier than the one specified by date, otherwise, it returns false.
+
+3 	
+
+`Object clone( )`
+
+Duplicates the invoking Date object.
+
+4 	
+
+`int compareTo(Date date)`
+
+Compares the value of the invoking object with that of date. Returns 0 if the values are equal. Returns a negative value if the invoking object is earlier than date. Returns a positive value if the invoking object is later than date.
+
+5 	
+
+`int compareTo(Object obj)`
+
+Operates identically to compareTo(Date) if obj is of class Date. Otherwise, it throws a ClassCastException.
+
+6 	
+
+`boolean equals(Object date)`
+
+Returns true if the invoking Date object contains the same time and date as the one specified by date, otherwise, it returns false.
+
+7 	
+
+`long getTime( )`
+
+Returns the number of milliseconds that have elapsed since January 1, 1970.
+
+8 	
+
+`int hashCode( )`
+
+Returns a hash code for the invoking object.
+
+9 	
+
+`void setTime(long time)`
+
+Sets the time and date as specified by time, which represents an elapsed time in milliseconds from midnight, January 1, 1970.
+
+10 	
+
+`String toString( )`
+
+Converts the invoking Date object into a string and returns the result.
+
+**Date Formatting Using SimpleDateFormat**
+
+Example:
+
+```
+mport java.util.*;
+import java.text.*;
+
+public class DateDemo {
+
+   public static void main(String args[]) {
+      Date dNow = new Date( );
+      SimpleDateFormat ft = 
+      new SimpleDateFormat ("E yyyy.MM.dd 'at' hh:mm:ss a zzz");
+
+      System.out.println("Current Date: " + ft.format(dNow));
+   }
+}
+```
+**Simple DateFormat Format Codes**
+
+**Character 	  Description 	            Example**
+G 	          Era designator 	          AD
+
+y 	          Year in four digits 	    2001
+
+M 	          Month in year 	          July or 07
+
+d 	          Day in month 	            10
+
+h 	          Hour in A.M./P.M.(1~12) 	12
+
+H 	          Hour in day (0~23) 	      22
+
+m 	          Minute in hour 	          30
+
+s 	          Second in minute 	        55
+
+S 	          Millisecond 	            234
+
+E 	          Day in week 	            Tuesday
+
+D 	          Day in year 	            360
+
+F 	          Day of week in month 	    2 (second Wed. in July)
+
+w 	          Week in year 	            40
+
+W 	          Week in month 	          1
+
+a 	          A.M./P.M. marker 	        PM
+
+k 	          Hour in day (1~24) 	      24
+
+K 	          Hour in A.M./P.M. (0~11) 	10
+
+z 	          Time zone 	              Eastern Standard Time
+
+' 	          Escape for text 	        Delimiter
+
+" 	          Single quote 	            `
+
