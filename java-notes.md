@@ -211,6 +211,7 @@ z|	          Time zone 	              |Eastern Standard Time
 
 **Java code -> Javac -> Bytecode -> Java VM -> Machine code**
 
-**compile: `javac nameOfYourFile.java` in terminal**
-**execute: `java nameOfYourFile` in terminal**
+**Compile: `javac nameOfYourFile.java` in terminal**
+
+**Execute: `java nameOfYourFile` in terminal**
 
