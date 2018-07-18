@@ -53,7 +53,7 @@ Thanks to [Tutorialspoint] (https://www.tutorialspoint.com/java/index.htm)
     45. `String trim()` Returns a copy of the string, with leading and trailing whitespace omitted.
     46. `static String valueOf(primitive data type x)` Returns the string representation of the passed data type argument.
     
-**Array**
+# Array
 
 Declaring an array variable, creating an array, and assigning the reference of the array to the variable can be combined in one statement, as shown below −
 
@@ -208,4 +208,9 @@ K| 	          Hour in A.M./P.M. (0~11) 	|10
 z|	          Time zone 	              |Eastern Standard Time
 '| 	          Escape for text 	        |Delimiter
 "| 	          Single quote 	            |`
+
+**Java code -> Javac -> Bytecode -> Java VM -> Machine code**
+
+**compile: `javac nameOfYourFile.java` in terminal**
+**execute: `java nameOfYourFile` in terminal**
 
