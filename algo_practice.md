@@ -38,3 +38,18 @@ class Solution(object):
                 a=a//2
         return t
 ```
+
+2. Hamming Weight
+```
+#Write a function that takes an unsigned integer and returns the number of '1' bits it has (also known as the Hamming weight).
+class Solution(object):
+    #Luyao's solution
+    def hammingWeight(n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        #since we are just counting 1, just slice out '0b'
+        return str(bin(n))[2:].count('1')
+    hammingWeight(2) 
+```
