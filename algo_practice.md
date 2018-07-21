@@ -1,5 +1,6 @@
 1. hamming distance
 ```
+#Luyao's solution
 class Solution(object):
     def hammingDistance(x, y):
         """
