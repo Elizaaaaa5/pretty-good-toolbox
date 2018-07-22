@@ -215,3 +215,93 @@ z|	          Time zone 	              |Eastern Standard Time
 
 **Execute: `java nameOfYourFile` in terminal**
 
+## Access Modifiers
+- Private
+  - the most restrictive access level. 
+  - class and interfaces acannot be private
+  - variables that are declared private can be accessed outside the class if public getting methods are present in the class.
+  - Main way to encapsulates an object and hides data from the outside world
+ 
+ - Public
+  - if the public class we are trying to access is in a different package, then the public class still needs to be imported.
+ 
+ - Protected 
+  - vars, methods, and constructors, which are declared protected in a superclass can be accessed only by the subclasses in other package or any class within the package of the protected members' class
+  - cannot be applied to class and interfaces. Only methods, fileds iif they are not in a interface
+  - protected access gives the subclass a chance to use the helper method or variable, while preventing a nonrelated class from trying to  use it.
+  
+  **Access Control and Inheritance**
+    -methods declared public in a superclass also must be public in all subclasses
+    -methods declared protected in a superclass must either be protected or public in subclasses; they cannot be private
+    methods declared private are not inherited at all.
+
+## Non Access Modifiers
+- Static
+  - variables
+    - The static keyword is used to create variables that will exist independently of any instances created for the class. Only one copy of the static variable exists regardless of the number of instances of the class.
+    - Static variables are also known as class variables. Local variables cannot be declared static.
+  - Methods
+    - The static keyword is used to create methods that will exist independently of any instances created for the class. 
+    - Static methods do not use any instance variables of any object of the class they are defined in. Static methods take all the data from parameters and compute something from those parameters, with no reference to variables.
+    - Class variables and methods can be accessed using the class name followed by a dot and the name of the variable or method.
+- Final
+  - variables
+    - A final variable can be explicitly initialized only once. A reference variable declared final can never be reassigned to refer to an different object.
+    - However, the data within the object can be changed. So, the state of the object can be changed but not the reference.
+    - With variables, the final modifier often is used with static to make the constant a class variable.
+    - example:
+    ```
+    public class Test {
+     final int value = 10;
+
+     // The following are examples of declaring constants:
+     public static final int BOXWIDTH = 6;
+     static final String TITLE = "Manager";
+
+     public void changeValue() {
+        value = 12;   // will give an error
+     }
+    }
+    ```
+  - methods
+    - A final method cannot be overridden by any subclasses.
+
+- Abstract
+  - Class
+    - An abstract class can never be instantiated. If a class is declared as abstract then the sole purpose is for the class to be extended.
+    - A class cannot be both abstract and final (since a final class cannot be extended). If a class contains abstract methods then the class should be declared abstract. Otherwise, a compile error will be thrown.
+    - An abstract class may contain both abstract methods as well normal methods.
+  - Methods
+    - An abstract method is a method declared without any implementation. The methods body (implementation) is provided by the subclass. Abstract methods can never be final or strict.
+    - Any class that extends an abstract class must implement all the abstract methods of the super class, unless the subclass is also an abstract class.
+    - If a class contains one or more abstract methods, then the class must be declared abstract. An abstract class does not need to contain abstract methods.
+    - The abstract method ends with a semicolon. Example: public abstract sample();
+
+- Synchronized
+  - The synchronized keyword used to indicate that a method can be accessed by only one thread at a time. The synchronized modifier can be applied with any of the four access level modifiers.
+  
+- Transient
+  - An instance variable is marked transient to indicate the JVM to skip the particular variable when serializing the object containing it.
+  - This modifier is included in the statement that creates the variable, preceding the class or data type of the variable.
+
+- Volatile
+  - The volatile modifier is used to let the JVM know that a thread accessing the variable must always merge its own private copy of the variable with the master copy in the memory.
+  - Accessing a volatile variable synchronizes all the cached copied of the variables in the main memory. Volatile can only be applied to instance variables, which are of type object or private. A volatile object reference can be null.
+  - example:
+  ```
+  # cached value of active is used, the loop may not stop when you set active to false in line 2. That's when you want to use volatile.
+     public class MyRunnable implements Runnable {
+     private volatile boolean active;
+
+     public void run() {
+        active = true;
+        while (active) {   // line 1
+           // some code here
+        }
+     }
+
+     public void stop() {
+        active = false;   // line 2
+     }
+    }
+  ````
